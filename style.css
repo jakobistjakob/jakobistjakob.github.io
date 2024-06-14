@@ -2,6 +2,7 @@
     /* Navigation */
     .Menu {
         flex-direction: column;
+        font-size: 18px;
     }
 
     /* Touch-Targets */
@@ -9,26 +10,20 @@
         padding: 10px;
     }
 
-    /* Schriftgröße */
-    body {
-        font-size: 18px;
-    }
-
     .konzert-liste .links{
         display: none;    
     }
 
+    .konzert-liste .rechts{
+        display: none;    
+    }
+
+    .konzert{
+        font-size: 20px !important;
+    }    
+
 }
 
-.GesamtContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    min-height: 100vh;
-    box-sizing: border-box;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
-}
 
 body{
     margin : 0;
@@ -36,6 +31,13 @@ body{
     background-size: cover;
     background-attachment: fixed; /* Das fixiert das Bild, sodass es beim Scrollen nicht mitbewegt wird */
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.blauer-body{
+    background-image: url('/Neue_Testfotos_von_Eva/wenigRosa.jpg');
 }
 
 .Menu{
@@ -61,6 +63,13 @@ body{
     margin-left: 5%;
 }
 
+.ueber-konzert-schriftzug{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
 .konzert-liste {
     display: flex;
     align-items: center;
@@ -74,13 +83,17 @@ body{
     flex: 2;
 }
 
-.konzert-liste .rechts{
-    flex: 8;
+.konzert-liste .mitte{
+    flex: 7;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+.konzert-liste .rechts{
+    flex: 1;
 }
 
 .konzert{
@@ -89,20 +102,50 @@ body{
     justify-content: space-between;
     width: 100%;
     font-family: 'Roboto', sans-serif;
-}
-
-.konzert .ort, .konzert .datum, .konzert .uhrzeit {
-    width: 33%;
-    text-align: center;
+    color: white;
     font-size: 30px;
 }
 
-.kontakt-div {
+.konzert .datum, .konzert .ort{
+    width: 50%;
+    text-align: center;    
+}
+
+.unter-konzert-schriftzug{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.fill-space{
     flex-grow: 1;
-    display: flex;
+}
+
+.kontakt-div {
+    /*display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    height: 100%;  /*Füllt den verfügbaren Platz aus */
+
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color:white;
+}
+
+.zentrierter-text {
+    text-align: center;
+}
+
+.zentrierter-text a {
+    text-decoration: none;
 }
 
 .Untere-Leiste-fest{
@@ -115,6 +158,7 @@ body{
     gap: 10%;
     align-items: center;
     padding: 1em; /* Falls Innenabstand benötigt wird */
+    /*background-color: rgba(255, 255, 255, 0.5);*/
 }
 
 .Untere-Leiste-scrollen{
