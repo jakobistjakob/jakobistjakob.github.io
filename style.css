@@ -39,7 +39,7 @@
     text-decoration: none;
     margin-left: 2vw;
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: green;
 }
 
 .menu-items:hover{
@@ -51,7 +51,7 @@
 }
 
 .ueber-konzert-schriftzug{
-    color: white;
+    color: blue;
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
     text-align: center;
