@@ -10,6 +10,10 @@
         padding: 10px;
     }
 
+    .Menu::before, .Menu::after {
+        content: none !important; 
+    }
+
     .konzert-liste .links{
         display: none;    
     }
@@ -20,14 +24,21 @@
 
     .konzert{
         font-size: 20px !important;
-    }    
+    }  
+    
+    .unter-konzert-schriftzug{
+        color: white;
+        font-size: 14px !important;
+        text-align: center;
+    }
 }
+
 
 body{
     margin : 0;
     background-image: url('/Neue_Testfotos_von_Eva/hintergrund.jpg');
     background-size: cover;
-    background-attachment: fixed; /* Das fixiert das Bild, sodass es beim Scrollen nicht mitbewegt wird */
+    background-attachment: fixed;
     background-position: center;
     display: flex;
     flex-direction: column;
@@ -45,14 +56,31 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 1em;
+    position: relative; /* Wichtig für die Positionierung der Pseudo-Elemente */
+}
 
+.Menu::before, .Menu::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 2px; /* Höhe des Strichs */
+    background-color: white; /* Farbe des Strichs */
+}
+
+.Menu::before {
+    left: 0;
+    width: 25%; /* Breite des Strichs auf der linken Seite */
+}
+
+.Menu::after {
+    right: 0;
+    width: 30%; /* Breite des Strichs auf der rechten Seite */
 }
 
 .menu-items{
     text-decoration: none;
     margin-left: 2vw;
-    font-family: 'Roboto', sans-serif;
-    color: green;
+    color: white;
 }
 
 .menu-items:hover{
@@ -64,8 +92,7 @@ body{
 }
 
 .ueber-konzert-schriftzug{
-    color: blue;
-    font-family: 'Roboto', sans-serif;
+    color: white;
     font-size: 40px;
     text-align: center;
 }
@@ -101,7 +128,6 @@ body{
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 30px;
 }
@@ -113,13 +139,31 @@ body{
 
 .unter-konzert-schriftzug{
     color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 25px;
+    font-size: 21px;
     text-align: center;
 }
 
 .fill-space{
     flex-grow: 1;
+}
+
+.cd-bilder-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.cd-bild {
+    width: calc(45%); /* Passt die Breite der Bilder an, sodass zwei Bilder pro Zeile angezeigt werden */
+    margin-bottom: 40px; /* Abstand zwischen den Bildern */
+}
+
+.cd-text-container {
+    text-align: center;
+    font-size: 18px;
+    color: white; /* Passt die Textfarbe an Ihre Website an */
+    margin-bottom: 20px;
 }
 
 .kontakt-div {
@@ -136,7 +180,6 @@ body{
     transform: translate(-50%, -50%);
     padding: 10px;
     font-size: 20px;
-    font-family: 'Roboto', sans-serif;
     color:white;
 }
 
@@ -174,4 +217,8 @@ body{
     width: 40px; 
     height: 40px;
     margin: 0 0px;
+}
+
+.nicht-lila-werden:visited{
+    color: blue;
 }
