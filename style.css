@@ -25,7 +25,7 @@
 
 body{
     margin : 0;
-    background-image: url('/Neue_Testfotos_von_Eva/wenigRosa.jpg');
+    background-image: url('/Neue_Testfotos_von_Eva/hintergrund.jpg');
     background-size: cover;
     background-attachment: fixed; /* Das fixiert das Bild, sodass es beim Scrollen nicht mitbewegt wird */
     background-position: center;
