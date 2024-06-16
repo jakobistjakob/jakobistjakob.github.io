@@ -201,6 +201,11 @@ body{
 
 .zentrierter-text a {
     text-decoration: none;
+    color: blue;
+}
+
+.zentrierter-text a:hover {
+    text-decoration: underline;
 }
 
 .Untere-Leiste-fest{
