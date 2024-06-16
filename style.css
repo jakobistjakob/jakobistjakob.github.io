@@ -51,6 +51,8 @@ body{
     background-image: url('/Neue_Testfotos_von_Eva/wenigRosa.jpg');
 }
 
+/* Menu */
+
 .Menu{
     display: flex;
     align-items: center;
@@ -69,7 +71,7 @@ body{
 
 .Menu::before {
     left: 0;
-    width: 25%; /* Breite des Strichs auf der linken Seite */
+    width: 30%; /* Breite des Strichs auf der linken Seite */
 }
 
 .Menu::after {
@@ -90,6 +92,8 @@ body{
 .schriftzug-container{
     margin-left: 5%;
 }
+
+/* Konzerte */
 
 .ueber-konzert-schriftzug{
     color: white;
@@ -147,6 +151,8 @@ body{
     flex-grow: 1;
 }
 
+/* Shop */
+
 .cd-bilder-container {
     display: flex;
     justify-content: space-around;
@@ -155,8 +161,18 @@ body{
 }
 
 .cd-bild {
-    width: calc(45%); /* Passt die Breite der Bilder an, sodass zwei Bilder pro Zeile angezeigt werden */
-    margin-bottom: 40px; /* Abstand zwischen den Bildern */
+    margin-bottom: 3%; /* Abstand zwischen den Bildern */
+}
+
+/* Anpassung der Breite der spezifischen Bilder */
+.cd-bilder-container img[src="cd_bilder/vorderseite.jpg"],
+.cd-bilder-container img[src="cd_bilder/rueckseite.jpg"] {
+    width: 40%; /* Erhöht die Breite des ersten Bildes */
+}
+
+.cd-bilder-container img[src="cd_bilder/aufgeklappt.jpg"],
+.cd-bilder-container img[src="cd_bilder/heftchen.jpg"] {
+    width: 50%; /* Verringert die Breite des zweiten Bildes */
 }
 
 .cd-text-container {
@@ -166,14 +182,10 @@ body{
     margin-bottom: 20px;
 }
 
+
+/* Kontakt */
+
 .kontakt-div {
-    /*display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;  /*Füllt den verfügbaren Platz aus */
-
-
     position: absolute;
     top: 50%;
     left: 50%;
