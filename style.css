@@ -115,7 +115,7 @@ body{
 }
 
 .konzert-liste .mitte{
-    flex: 7;
+    flex: 6;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,7 +124,7 @@ body{
 }
 
 .konzert-liste .rechts{
-    flex: 1;
+    flex: 2;
 }
 
 .konzert{
@@ -143,7 +143,6 @@ body{
 
 .unter-konzert-schriftzug{
     color: white;
-    font-size: 21px;
     text-align: center;
 }
 
@@ -157,7 +156,7 @@ body{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin: 7%;
 }
 
 .cd-bild {
