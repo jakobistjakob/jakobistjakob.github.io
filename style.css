@@ -1,61 +1,240 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@media (max-width: 600px) {
+    /* Navigation */
+    .Menu {
+        flex-direction: column;
+        font-size: 18px;
+    }
+
+    /* Touch-Targets */
+    .menu-items {
+        padding: 10px;
+    }
+
+    .Menu::before, .Menu::after {
+        content: none !important; 
+    }
+
+    .konzert-liste .links{
+        display: none;    
+    }
+
+    .konzert-liste .rechts{
+        display: none;    
+    }
+
+    .konzert{
+        font-size: 20px !important;
+    }  
+    
+    .unter-konzert-schriftzug{
+        color: white;
+        font-size: 14px !important;
+        text-align: center;
+    }
 }
 
-body {
+
+body{
+    margin : 0;
+    background-image: url('/Neue_Testfotos_von_Eva/hintergrund.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     min-height: 100vh;
-    background: whitesmoke;
+    font-family: 'Playfair Display', serif; 
+    font-weight: 400;
 }
 
-.wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
+.blauer-body{
+    background-image: url('/Neue_Testfotos_von_Eva/wenigRosa.jpg');
+}
+
+/* Menu */
+
+.Menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    position: relative; /* Wichtig für die Positionierung der Pseudo-Elemente */
+}
+
+.Menu::before, .Menu::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 2px; /* Höhe des Strichs */
+    background-color: white; /* Farbe des Strichs */
+}
+
+.Menu::before {
+    left: 0;
+    width: 30%; /* Breite des Strichs auf der linken Seite */
+}
+
+.Menu::after {
+    right: 0;
+    width: 30%; /* Breite des Strichs auf der rechten Seite */
+}
+
+.menu-items{
+    text-decoration: none;
+    margin-left: 2vw;
+    color: white;
+}
+
+.menu-items:hover{
+    text-decoration: underline;
+}
+
+.schriftzug-container{
+    margin-left: 5%;
+}
+
+/* Konzerte */
+
+.ueber-konzert-schriftzug{
+    color: white;
+    font-size: 40px;
     text-align: center;
 }
 
-h2 {
-    font-size: 2em;
-    color: #e94d58;
-    margin: 15px 0;
+.konzert-liste {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Nimmt den verfügbaren Platz ein */
+    padding: 1em; /* Falls Innenabstand benötigt wird */
+    margin-top: 3%;
 }
 
-.gif {
+.konzert-liste .links{
+    flex: 2;
+}
+
+.konzert-liste .mitte{
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.konzert-liste .rechts{
+    flex: 2;
+}
+
+.konzert{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
-    max-width: 300px;
-}
-
-.btn-group {
-    margin-top: 50px;
-    position: relative;
-    height: 40px;
-}
-
-button {
-    width: 150px;
-    height: inherit;
     color: white;
-    font-size: 1.2em;
-    border-radius: 30px;
-    outline: none;
-    cursor: pointer;
-    box-shadow: 0 2px 4px gray;
-    border: 2px solid #e94d58;
+    font-size: 30px;
 }
 
-button.yes-btn {
-    background: #e94d58;
+.konzert .datum, .konzert .ort{
+    width: 50%;
+    text-align: center;    
 }
 
-button.no-btn {
-    background: white;
-    color: #e94d58;
+.unter-konzert-schriftzug{
+    color: white;
+    text-align: center;
+}
+
+.fill-space{
+    flex-grow: 1;
+}
+
+/* Shop */
+
+.cd-bilder-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 7%;
+}
+
+.cd-bild {
+    margin-bottom: 3%; /* Abstand zwischen den Bildern */
+}
+
+/* Anpassung der Breite der spezifischen Bilder */
+.cd-bilder-container img[src="cd_bilder/vorderseite.jpg"],
+.cd-bilder-container img[src="cd_bilder/rueckseite.jpg"] {
+    width: 40%; /* Erhöht die Breite des ersten Bildes */
+}
+
+.cd-bilder-container img[src="cd_bilder/aufgeklappt.jpg"],
+.cd-bilder-container img[src="cd_bilder/heftchen.jpg"] {
+    width: 50%; /* Verringert die Breite des zweiten Bildes */
+}
+
+.cd-text-container {
+    text-align: center;
+    font-size: 18px;
+    color: white; /* Passt die Textfarbe an Ihre Website an */
+    margin-bottom: 20px;
+}
+
+
+/* Kontakt */
+
+.kontakt-div {
     position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-size: 20px;
+    color:white;
+}
+
+.zentrierter-text {
+    text-align: center;
+}
+
+.zentrierter-text a {
+    text-decoration: none;
+    color: blue;
+}
+
+.zentrierter-text a:hover {
+    text-decoration: underline;
+}
+
+.Untere-Leiste-fest{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0vw;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    padding: 1em; /* Falls Innenabstand benötigt wird */
+    /*background-color: rgba(255, 255, 255, 0.5);*/
+}
+
+.Untere-Leiste-scrollen{
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    padding: 1em; /* Falls Innenabstand benötigt wird */
+}
+
+.icon-Bilder{
+    width: 40px; 
+    height: 40px;
+    margin: 0 0px;
+}
+
+.nicht-lila-werden:visited{
+    color: blue;
 }
