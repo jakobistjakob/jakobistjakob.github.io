@@ -1,17 +1,30 @@
 // Anzahl der Klicks auf den "No"-Button
 let noClickCount = 0;
 
+// Variablen, um die vorherige Position zu speichern
+let previousX = null;
+let previousY = null;
+
 // Funktion, um eine zufällige Position für den "No"-Button zu generieren
 function moveNoButton() {
     const noButton = document.getElementById('noButton');
     const maxWidth = window.innerWidth - noButton.offsetWidth;
     const maxHeight = window.innerHeight - noButton.offsetHeight;
 
-    const randomX = Math.floor(Math.random() * maxWidth);
-    const randomY = Math.floor(Math.random() * (maxHeight - 150)) + 100; // +100, um Überschneidungen mit dem GIF zu vermeiden
+    let randomX, randomY;
 
+    do {
+        randomX = Math.floor(Math.random() * maxWidth);
+        randomY = Math.floor(Math.random() * (maxHeight - 150)) + 100; // +100, um Überschneidungen mit dem GIF zu vermeiden
+    } while (randomX === previousX && randomY === previousY);
+
+    // Aktualisiere die Position des Buttons
     noButton.style.left = randomX + 'px';
     noButton.style.top = randomY + 'px';
+
+    // Speichere die aktuelle Position für den nächsten Vergleich
+    previousX = randomX;
+    previousY = randomY;
 }
 
 // Ereignislistener für den "Yes"-Button
