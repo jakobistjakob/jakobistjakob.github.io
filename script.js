@@ -1,27 +1,37 @@
-const yesBtn = document.querySelector(".yes-btn");
-const noBtn = document.querySelector(".no-btn");
-const question = document.querySelector(".question");
-const gif = document.querySelector(".gif");
+// Anzahl der Klicks auf den "Nein"-Button
+let noClickCount = 0;
 
-// Change text and gif when the Yes button is clicked
-yesBtn.addEventListener("click", () => {
-  question.innerHTML = "You got Rickrolled 😘 (FOLLOW ME @kristel_tech or 7 years bad luck)";
-  gif.src = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGI1cW5wMWhpaDF5b3pjdTF0OHZrcHJvaGkzOHJteDhmd245OGRnZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Vuw9m5wXviFIQ/giphy.gif";
+// Funktion, um eine zufällige Position für den "Nein"-Button zu generieren
+function moveNoButton() {
+    const noButton = document.getElementById('noButton');
+    const buttonContainer = document.querySelector('.button-container');
+    const maxWidth = window.innerWidth - noButton.offsetWidth;
+    const maxHeight = window.innerHeight - noButton.offsetHeight;
+
+    const randomX = Math.floor(Math.random() * maxWidth);
+    const randomY = Math.floor(Math.random() * maxHeight);
+
+    noButton.style.left = randomX + 'px';
+    noButton.style.top = randomY + 'px';
+}
+
+// Ereignislistener für den "Ja"-Button
+document.getElementById('yesButton').addEventListener('click', function() {
+    document.getElementById('mainContent').style.display = 'none';
+    document.getElementById('yesContent').style.display = 'block';
 });
 
-// Make the No button move randomly on hover
-noBtn.addEventListener("mouseover", () => {
-  const wrapper = document.querySelector(".wrapper");
-  const wrapperRect = wrapper.getBoundingClientRect();
-  const noBtnRect = noBtn.getBoundingClientRect();
-
-  // Calculate max positions to ensure the button stays within the wrapper
-  const maxX = wrapperRect.width - noBtnRect.width;
-  const maxY = wrapperRect.height - noBtnRect.height;
-
-  const randomX = Math.floor(Math.random() * maxX);
-  const randomY = Math.floor(Math.random() * maxY);
-
-  noBtn.style.left = randomX + "px";
-  noBtn.style.top = randomY + "px";
+// Ereignislistener für den "Nein"-Button
+document.getElementById('noButton').addEventListener('click', function() {
+    noClickCount++;
+    if (noClickCount >= 5) {
+        this.style.display = 'none';
+    } else {
+        moveNoButton();
+    }
 });
+
+// Initiale Positionierung des "Nein"-Buttons
+window.onload = function() {
+    moveNoButton();
+};

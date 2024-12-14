@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random No Button</title>
-    <link rel="stylesheet" href="style.css"/>
+    <title>Süße Frage</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="wrapper">
-        <h2 class="question">Do you love me?</h2>
-        <img class="gif" alt="gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjJvdWZzYXc1NGJ6aGp1cDE3b2dyNnVzOGN1andkMjVrMmRzeGwwZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3OhXBaoR1tVPW/giphy.gif" />
-        <div class="btn-group">
-            <button class="yes-btn">Yes</button>
-            <button class="no-btn">No</button>
+    <div class="container" id="mainContent">
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGI1cW5wMWhpaDF5b3pjdTF0OHZrcHJvaGkzOHJteDhmd245OGRnZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Vuw9m5wXviFIQ/giphy.gif" alt="Frage GIF" class="center-gif">
+        <h1>Findest du mich süß?</h1>
+        <div class="button-container">
+            <button id="yesButton" class="btn yes">Ja</button>
+            <button id="noButton" class="btn no">Nein</button>
         </div>
     </div>
+
+    <div class="container" id="yesContent" style="display: none;">
+        <iframe src="https://giphy.com/embed/tXL4FHPSnVJ0A" width="480" height="322" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
