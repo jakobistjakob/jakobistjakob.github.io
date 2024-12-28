@@ -243,3 +243,147 @@ body{
     color: blue;
 }
 
+/* Ab hier Mia stuff */
+
+.jetztNurGIF{
+    position: absolute;
+    left: 28%;
+    right: 28%;
+}
+
+.center{
+    margin: 0;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    bottom: 35%;
+    right: 25%;
+}
+
+.text-unter-gif{
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    bottom: 25%;
+    right: 25%;
+}
+
+.yes-button{
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    bottom: 15%;
+    right: 45%;
+}
+
+#yesButton button {
+    background-color: #90ee90; /* Light green background */
+    border: 2px solid #32cd32; /* Lime green border */
+    border-radius: 12px; /* Rounded corners */
+    color: white; /* White text color */
+    font-family: 'Indie Flower', cursive; /* Cute font */
+    font-size: 20px; /* Larger font size */
+    padding: 10px 20px; /* Padding for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+#myDIV button {
+    background-color: #ffcccb; /* Light pink background */
+    border: 2px solid #ff69b4; /* Hot pink border */
+    border-radius: 12px; /* Rounded corners */
+    color: white; /* White text color */
+    font-family: 'Indie Flower', cursive; /* Cute font */
+    font-size: 20px; /* Larger font size */
+    padding: 10px 20px; /* Padding for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s, opacity 1s; /* Smooth transitions */
+}
+
+#myDIV button.hidden {
+    opacity: 0;
+    transition: opacity 1s ease-out; /* Smooth transition for opacity */
+}
+
+#yesButton button:hover {
+    background-color: #32cd32; /* Lime green background on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+#myDIV button:hover {
+    background-color: #ff69b4; /* Hot pink background on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+#yesButton button:active {
+    background-color: #228b22; /* Forest green background on click */
+    transform: scale(0.9); /* Slightly shrink the button on click */
+}
+
+#myDIV button:active {
+    background-color: #ff1493; /* Deep pink background on click */
+    transform: scale(0.9); /* Slightly shrink the button on click */
+}
+
+
+#yesButton {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#myDIV{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px; /* Adjust the margin as needed */
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    color: white;
+    transition: 0.5s transform;
+    width: 100px; /* Adjust the width as needed */
+  }
+  
+.button{
+    z-index: 1;
+    position: absolute;
+  }
+
+.jumpScare{
+    position: absolute;
+    top:5px;
+    left:5px;
+    right:5px;
+    bottom:5px;
+}
+
+#senddudes {
+    display: none;
+}
+
+.nudes{
+    position: absolute;
+    top: 80%;
+    bottom: 5%;
+    left: 80%;
+    right: 5%;
+}
+
+.kpop_dance{
+    position: absolute;
+    top: 2%;
+    left: 55%;
+    right: 2%;
+    bottom: 60%;
+}
+
+.center2{
+    position: absolute;
+    top: 2%;
+    left: 65%;
+    right: 2%;
+    bottom: 70%;
+}
